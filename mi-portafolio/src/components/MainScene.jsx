@@ -3,8 +3,9 @@ import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from "@react-three/drei";
 import Obj from './Obj'
 import Island from './Island';
-import {Environment} from '@react-three/drei';
+import { Environment } from '@react-three/drei';
 import Room from './Room';
+import Stone from './Stone';
 
 
 const MainScene = () => {
@@ -12,12 +13,21 @@ const MainScene = () => {
         <section className='h-screen w-screen overflow-x-hidden bg-[#dedad1]'>
 
             <Canvas camera={{ position: [0, 4, 80], fov: 50 }}>
-                <ambientLight intensity={3} />
-                <directionalLight position={[0, 2, 10]} intensity={3} />
+                <ambientLight intensity={0.5} />
+
+                <directionalLight position={[8, 1, 20]} intensity={2} color={"#ffe7cc"} />
+
                 <OrbitControls />
-                <Island path='/obj/island.glb'  scale={0.5} position={[0, 0, 0]} />
+
                 <Environment preset='city' />
-                <Room path='/obj/room.glb' scale={5} position={[0, 2, 0]} />
+
+                <Island path='/obj/island.glb' scale={0.5} position={[0, 0, 0]} rotation={[-Math.PI / 0.01, 1.2, 0]} />
+                
+                <Room path='/obj/room.glb' scale={6} position={[0, 2, 0]} />
+                <Stone path='/obj/stone.glb' scale={4} position={[1, 2.8, 12.4]} rotation={[-Math.PI / 0.01, 1.2, 0]} />
+                <Stone path='/obj/stone.glb' scale={4} position={[6.7, 2.8, 14]} rotation={[-Math.PI / 0.01, 4.3, 0]} />
+                <Stone path='/obj/stone.glb' scale={3.2} position={[3.7, 2.8, 18.8]} rotation={[-Math.PI / 0.01, 1.2, 0]} />
+                <Stone path='/obj/stone.glb' scale={4} position={[8.4, 2.8, 20.4]} rotation={[-Math.PI / 0.01, 4.3, 0]} />
 
             </Canvas>
 
