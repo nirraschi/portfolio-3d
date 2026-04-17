@@ -6,7 +6,9 @@ import Island from './Island';
 import { Environment } from '@react-three/drei';
 import Room from './Room';
 import Stone from './Stone';
-
+import Desktop from './Desktop';
+import  Table  from './Table';
+import Pc from './Pc';
 
 const MainScene = () => {
     return (
@@ -28,6 +30,10 @@ const MainScene = () => {
                 <Stone path='/obj/stone.glb' scale={4} position={[6.7, 2.8, 14]} rotation={[-Math.PI / 0.01, 4.3, 0]} />
                 <Stone path='/obj/stone.glb' scale={3.2} position={[3.7, 2.8, 18.8]} rotation={[-Math.PI / 0.01, 1.2, 0]} />
                 <Stone path='/obj/stone.glb' scale={4} position={[8.4, 2.8, 20.4]} rotation={[-Math.PI / 0.01, 4.3, 0]} />
+
+                {/* <Desktop path='/obj/desktop.glb' scale={0.4} position={[4.1, 4.2, -3.3]} rotation={[-Math.PI / 0.01, 4.72, 0]} /> */}
+                <Table path='/obj/table.glb' scale={11} position={[1.6, 4.8, 0.2]} rotation={[-Math.PI / 0.1, 4.72, 0.02]} />
+                <Pc path='/obj/pc.glb' scale={48} position={[0.5, 9.8, -7]} rotation={[-Math.PI / 0.01, 0, 0]} />
 
             </Canvas>
 
