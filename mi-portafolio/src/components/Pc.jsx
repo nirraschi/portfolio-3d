@@ -1,5 +1,8 @@
 
 import { useGLTF } from '@react-three/drei'
+import * as THREE from 'three'
+const color = new THREE.MeshStandardMaterial({ color: "#ada387" })
+
 
 export default function Pc(props) {
     const { nodes, materials } = useGLTF('/obj/pc.glb')
@@ -27,13 +30,13 @@ export default function Pc(props) {
                 castShadow
                 receiveShadow
                 geometry={nodes.speakers_1.geometry}
-                material={materials.M_plastic_bone}
+                material={color}
             />
             <mesh
                 castShadow
                 receiveShadow
                 geometry={nodes.speakers_2.geometry}
-                material={materials.M_lam_darkgrey}
+                material={color}
             />
             <mesh
                 castShadow
@@ -51,19 +54,19 @@ export default function Pc(props) {
                 castShadow
                 receiveShadow
                 geometry={nodes.keyboard_1.geometry}
-                material={materials.M_plastic_bone_shad}
+                material={color}
             />
             <mesh
                 castShadow
                 receiveShadow
                 geometry={nodes.keyboard_2.geometry}
-                material={materials.M_plastic_bone}
+                material={color}
             />
             <mesh
                 castShadow
                 receiveShadow
                 geometry={nodes.keyboard_3.geometry}
-                material={materials.M_lam_browngrey}
+                material={color}
             />
             <mesh
                 castShadow

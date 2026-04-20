@@ -62,6 +62,6 @@ function Obj({
 }
 
 // Precarga opcional
-useGLTF.preload("/obj/moon.glb");
+useGLTF.preload("/obj/tree.glb","/obj/cat.glb","/obj/github.glb");
 
 export default Obj;

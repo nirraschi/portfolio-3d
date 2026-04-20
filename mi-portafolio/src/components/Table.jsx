@@ -4,7 +4,7 @@ import * as THREE from 'three'
 import { MeshStandardMaterial } from 'three'
 
 export default function Table(props) {
-    const { nodes, materials } = useGLTF('/obj/table.glb')
+    const { nodes } = useGLTF('/obj/table.glb')
     const color = new THREE.MeshStandardMaterial({ color: "#ada387"  })
     return (
         <group {...props} dispose={null}>

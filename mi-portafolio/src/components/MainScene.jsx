@@ -9,6 +9,10 @@ import Stone from './Stone';
 import Desktop from './Desktop';
 import  Table  from './Table';
 import Pc from './Pc';
+import Chair from './Chair';
+import Plant from './Plant';
+import Tree from './Tree';
+import Github from './Github';
 
 const MainScene = () => {
     return (
@@ -34,6 +38,20 @@ const MainScene = () => {
                 {/* <Desktop path='/obj/desktop.glb' scale={0.4} position={[4.1, 4.2, -3.3]} rotation={[-Math.PI / 0.01, 4.72, 0]} /> */}
                 <Table path='/obj/table.glb' scale={11} position={[1.6, 4.8, 0.2]} rotation={[-Math.PI / 0.1, 4.72, 0.02]} />
                 <Pc path='/obj/pc.glb' scale={48} position={[0.5, 9.8, -7]} rotation={[-Math.PI / 0.01, 0, 0]} />
+
+                <Chair path='/obj/chair.glb' scale={0.07} position={[-3.2, 4.8, 1]} rotation={[-Math.PI / 0.01, 1.2, 0]} />
+
+                <Tree path='/obj/tree.glb' scale={3.3} position={[-21, 4.2, 1]} rotation={[-Math.PI / 0.01, 2.5, 0]}  />
+
+                <Obj path='/obj/cat.glb' scale={0.047} position={[6, 4.6, 1]} rotation={[-Math.PI / 0.01, 3, 0]}  />
+
+                <Plant path='/obj/plant.glb' scale={7} position={[7.8, 8, -9.5]} rotation={[-Math.PI / 0.01, 0, 0]}  />
+
+                {/* <Obj path='/obj/github.glb' scale={1} position={[0, 13, -15]} rotation={[-Math.PI / 0.01, 0, 0]}  /> */}
+                <Github path='/obj/github.glb' scale={1} position={[0, 13, -15]} rotation={[-Math.PI / 0.01, 0, 0]}  />
+
+
+
 
             </Canvas>
 
